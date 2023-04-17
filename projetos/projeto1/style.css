@@ -1,0 +1,24 @@
+* {
+   margin: 0;
+   padding: 0;
+}
+
+header {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+
+header img {
+   width: 100px;
+}
+
+#list-header {
+   list-style-type: none;
+   display: flex;
+}
+
+section {
+   background-color: lightblue;
+   height: 600px;
+}
