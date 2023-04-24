@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Border</title>
+   <style>
+      div {
+         height: 400px;
+         background-color: rgb(81, 91, 236);
+         border: 5px solid black;
+         outline: 5px solid yellow;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: flex-end;
+      }
+      #sla {
+         display: flex;
+         align-items: flex-end;
+         border: none;
+         outline: none;
+      }
+      #div2 {
+         background-color: blue;
+         display: flex;
+         justify-content: center;
+         width: 100px;
+         height: 50px;
+         border: 1px solid black;
+         outline: none;
+      }
+   </style>
+</head>
+<body>
+   <div>
+      <h1>Hello World</h1>
+      <div id="sla">
+         <div id="div2">
+            <h1>Div 2</h1>
+         </div>
+      </div>
+   </div>
+</body>
+</html>

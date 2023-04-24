@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Media Queries</title>
+   <style>
+      body {
+         height: 97vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+      div {
+         width: 200px;
+         height: 500px;
+         background-color: blue;
+         padding: 15px;
+         text-align: justify;
+      }
+      @media (min-width: 400px) {
+         div {
+            background-color: yellow;
+            width: 50%;
+         }
+      }
+      @media (min-width: 800px) {
+         div {
+            background-color: red;
+            width: 80%;
+         }
+      }
+   </style>
+</head>
+<body>
+   <div>
+      <h1>Teste</h1>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit dolores sed nostrum soluta architecto enim ipsa, velit qui minus animi quisquam aliquam, deleniti voluptas, ratione unde dolore alias repellat doloremque?
+      Adipisci voluptas esse culpa voluptatum odio perspiciatis expedita dicta ullam, incidunt nisi veritatis consequatur sapiente dolorum possimus saepe. Reprehenderit voluptatibus quibusdam enim dolorem numquam culpa laboriosam eligendi ipsam doloremque error.</p>
+   </div>
+</body>
+</html>
