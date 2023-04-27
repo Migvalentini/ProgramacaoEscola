@@ -1,0 +1,28 @@
+body {
+   background-color: rgb(76, 201, 243);
+   display: flex;
+   justify-content: center;
+   padding: 20px;
+}
+input#number-input, input#submit-input {
+   border: none;
+   border-radius: 5px;
+   outline: none;
+   padding: 5px;
+   font-size: 1.2em;
+   background-color: white;
+}
+ul {
+   width: 200px;
+   margin: 0 auto;
+   padding: 0;
+}
+ul#list {
+   text-align: center;
+   font-size: 2em;
+   list-style: none;
+}
+li::selection {
+   background-color: rgb(124, 112, 194);
+   color: rgb(218, 235, 240);
+}
