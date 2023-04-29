@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemplo de Lista Ordenada com Negrito Dinâmico</title>
+</head>
+<body>
+  <form>
+    <label for="pesquisa">Pesquisar:</label>
+    <input type="text" id="pesquisa" name="pesquisa">
+  </form>
+  <ol>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+    <li>Item 5</li>
+  </ol>
+  <script>
+         // obter a lista ordenada e o input do usuário
+      const lista = document.querySelector('ol');
+      const input = document.querySelector('input');
+
+      // adicionar um evento de digitação no input
+      input.addEventListener('keyup', () => {
+      // obter o valor atual do input
+      const termo = input.value.toLowerCase();
+
+      // percorrer cada item da lista
+      lista.querySelectorAll('li').forEach((item) => {
+         // obter o texto do item em minúsculas
+         const texto = item.textContent.toLowerCase();
+
+         // verificar se o termo está contido no texto do item
+         if (texto.includes(termo)) {
+            // adicionar negrito ao texto do item
+            item.innerHTML = texto.replace(termo, `<b>${termo}</b>`);
+         } else {
+            // remover negrito do texto do item (caso exista)
+            item.innerHTML = texto;
+         }
+      });
+      });
+  </script>
+</body>
+</html>
