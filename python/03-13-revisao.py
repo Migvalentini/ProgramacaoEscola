@@ -28,4 +28,4 @@ vendedores[i][0]['comissao'] += 300
 print(f"O nome do vendedor que mais vendeu foi o/a {vendedores[i][0]['nome']}")
 
 for n in vendedores:
-    print(f"Nome: {n[0]['nome']} - Valor da comissão: R${n[0]['comissao']} ")
+    print(f"Nome: {n[0]['nome']} - Valor da comissão: R${n[0]['comissao']}")
