@@ -1,10 +1,9 @@
 "use strict";
-/* const calculoJuros = (principal: number = 100, meses: number = 5, taxa:number = 3) => {
-    let resultado = (principal * meses * taxa) / 100
-    return resultado
-}
-
-console.log(calculoJuros(100, 5, 3)) */
+const calculoJuros = (principal = 100, meses = 5, taxa = 3) => {
+    let resultado = (principal * meses * taxa) / 100;
+    return resultado;
+};
+console.log(calculoJuros(100, 5, 3));
 const fat = (n) => {
     if (n === 0) {
         return 1;
