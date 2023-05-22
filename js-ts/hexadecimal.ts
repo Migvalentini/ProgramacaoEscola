@@ -40,4 +40,3 @@ function inverterString(str: string): string {
  }
  
  console.log(`O número 438 em número hexadecimal é ${converter(438)}`);
- 
