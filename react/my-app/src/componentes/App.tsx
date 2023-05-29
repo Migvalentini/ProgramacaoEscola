@@ -1,8 +1,8 @@
 import React from 'react';
-import './App.css';
-import daniel from './img/daniel.jpg'
-import alana2 from './img/alana2.jpg'
-import diego from './img/diego.jpg'
+import '../App.css';
+import daniel from '../img/daniel.jpg'
+import alana2 from '../img/alana2.jpg'
+import diego from '../img/diego.jpg'
 
 function App() {
   return (
