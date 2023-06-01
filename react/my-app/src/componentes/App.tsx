@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <h1>TCC - Trabalho de Conclusão de Curso</h1>
         <div className='imagens'>
-          <img src={daniel} alt="Erro" />
+          <img src={daniel} alt="Erro" className='img'/>
           <img src={alana2} alt="Erro" className='img' id='alana'/>
           <img src={diego} alt="Erro" className='img' id='diego'/>
         </div>

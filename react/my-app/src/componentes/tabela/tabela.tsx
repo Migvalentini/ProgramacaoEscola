@@ -4,15 +4,20 @@ export default function TabelaComponente() {
    return (
       <div className="table">
          <table>
+            <thead>
+               <td>Livro</td>
+               <td>Autor</td>
+               <td>Ano</td>
+            </thead>
             <tr>
-               <th>1</th>
-               <th>2</th>
-               <th>3</th>
+               <th>O Homem que Ouve Cavalos</th>
+               <th>Monty Roberts</th>
+               <th>1996</th>
             </tr>
             <tr>
-               <th>4</th>
-               <th>5</th>
-               <th>6</th>
+               <th>Violência Não é a Resposta</th>
+               <th>Monty Roberts</th>
+               <th>2002</th>
             </tr>
          </table>
       </div>

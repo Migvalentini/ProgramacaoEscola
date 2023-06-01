@@ -2,5 +2,19 @@
    display: flex;
    align-items: center;
    justify-content: center;
-   color: white;
+   margin-top: 50px;
+}
+
+table, td, th {
+   border-collapse: collapse;
+   border: 2px solid black;
+   padding: 3px;
+}
+
+td {
+   background-color: rgb(86, 196, 233);
+}
+
+th {
+   background-color: rgb(212, 234, 250);
 }
