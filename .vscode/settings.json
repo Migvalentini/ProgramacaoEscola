@@ -1,3 +1,8 @@
 {
-   "cSpell.language": "en,lorem,pt,pt-BR"
+   "cSpell.language": "en,lorem,pt,pt-BR",
+   "cSpell.words": [
+      "KEYDOWN",
+      "pygame",
+      "spritecollide"
+   ]
 }
