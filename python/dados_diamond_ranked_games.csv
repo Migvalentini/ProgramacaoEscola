@@ -1,0 +1,186 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>League of Legends Diamond Ranked Games (10 min) | Kaggle</title>
+  <meta charset="utf-8" />
+    <meta name="robots" content="index, follow" />
+  <meta name="description" content="Classify LoL ranked games outcome by looking at the first 10min worth of data" />
+  <meta name="turbolinks-cache-control" content="no-cache" />
+    <meta name="keywords" content="arts and entertainment,online communities,video games,games" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+  <meta name="theme-color" content="#008ABC" />
+  <script nonce="9tzHsaPSj63vZUxLq8BtEg==" type="text/javascript">
+    window["pageRequestStartTime"] = 1687799074908;
+    window["pageRequestEndTime"] = 1687799075042;
+    window["initialPageLoadStartTime"] = new Date().getTime();
+  </script>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin="anonymous" /><link rel="preconnect" href="https://stats.g.doubleclick.net" /><link rel="preconnect" href="https://storage.googleapis.com" /><link rel="preconnect" href="https://apis.google.com" />
+  <link href="/static/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link rel="manifest" href="/static/json/manifest.json" crossorigin="use-credentials">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="preload" as="style" />
+  <link href="https://fonts.googleapis.com/icon?family=Google+Material+Icons&display=block"
+    rel="stylesheet" media="print" id="async-google-font-1" />
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" media="print" id="async-google-font-2" />
+  <script nonce="9tzHsaPSj63vZUxLq8BtEg==" type="text/javascript">
+    const styleSheetIds = ["async-google-font-1", "async-google-font-2"];
+    styleSheetIds.forEach(function (id) {
+      document.getElementById(id).addEventListener("load", function() {
+        this.media = "all";
+      });
+    });
+  </script>
+
+    <link rel="canonical" href="/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/vendor.css?v=347bcfc883299a7a24f3" />
+    <link rel="stylesheet" type="text/css" href="/static/assets/app.css?v=81f9b0bf40d37d37cc8f" />
+  
+    
+ 
+      <script nonce="9tzHsaPSj63vZUxLq8BtEg==">
+        try{(function(a,s,y,n,c,h,i,d,e){d=s.createElement("style");
+        d.appendChild(s.createTextNode(""));s.head.appendChild(d);d=d.sheet;
+        y=y.map(x => d.insertRule(x + "{ opacity: 0 !important }"));
+        h.start=1*new Date;h.end=i=function(){y.forEach(x => x<d.cssRules.length ? d.deleteRule(x) : {})};
+        (a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;
+        })(window,document,['.site-header-react__nav'],'dataLayer',2000,{'GTM-52LNT9S':true});}catch(ex){}
+    </script>
+    <script nonce="9tzHsaPSj63vZUxLq8BtEg==">
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T7QHS60L4Q', {
+            'optimize_id': 'GTM-52LNT9S',
+            'displayFeaturesTask': null,
+            'send_page_view': false,
+            'content_group1': 'Datasets'
+        });
+    </script>
+    <script nonce="9tzHsaPSj63vZUxLq8BtEg==" async src="https://www.googletagmanager.com/gtag/js?id=G-T7QHS60L4Q"></script>
+
+  
+    
+    <meta property="og:url" content="/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min" />
+    <meta property="og:title" content="League of Legends Diamond Ranked Games (10 min)" />
+    <meta property="og:description" content="Classify LoL ranked games outcome by looking at the first 10min worth of data" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://storage.googleapis.com/kaggle-datasets-images/600276/1078419/2fb3bf6ad60c3f050712e620a3d8bd35/dataset-card.jpeg?t=2020-04-13-13-57-53" />
+    <meta property="fb:app_id" content="2665027677054710" />
+
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@kaggledatasets" />
+
+
+  <meta name="twitter:site" content="@Kaggle" /> 
+  
+    
+    <script nonce="9tzHsaPSj63vZUxLq8BtEg==" type="application/ld+json">{"@context":"http://schema.org/","@type":"Dataset","name":"League of Legends Diamond Ranked Games (10 min)","description":"### Context\n\nLeague of Legends is a MOBA (multiplayer online battle arena) where 2 teams (blue and red) face off. There are 3 lanes, a jungle, and 5 roles. The goal is to take down the enemy Nexus to win the game.\n\n\n### Content\n\nThis dataset contains the first 10min. stats of approx. 10k ranked games (SOLO QUEUE) from a high ELO (DIAMOND I to MASTER). Players have roughly the same level.\n\nEach game is unique. The **gameId** can help you to fetch more attributes from the Riot API.\n\nThere are 19 features per team (38 in total) collected after 10min in-game. This includes kills, deaths, gold, experience, level... It's up to you to do some feature engineering to get more insights.\n\nThe column **blueWins** is the target value (the value we are trying to predict). A value of 1 means the blue team has won. 0 otherwise.\n\nSo far I know, there is no missing value.\n\n### Glossary\n- Warding totem: An item that a player can put on the map to reveal the nearby area. Very useful for map/objectives control.\n- Minions: NPC that belong to both teams. They give gold when killed by players.\n- Jungle minions: NPC that belong to NO TEAM. They give gold and buffs when killed by players.\n- Elite monsters: Monsters with high hp/damage that give a massive bonus (gold/XP/stats) when killed by a team.\n- Dragons: Elite monster which gives team bonus when killed. The 4th dragon killed by a team gives a massive stats bonus. The 5th dragon (Elder Dragon) offers a huge advantage to the team.\n- Herald: Elite monster which gives stats bonus when killed by the player. It helps to push a lane and destroys structures.\n- Towers: Structures you have to destroy to reach the enemy Nexus. They give gold.\n- Level: Champion level. Start at 1. Max is 18.\n\n\n### Acknowledgements\n\nThanks, Rito Gaming.","url":"https://www.kaggle.com/bobbyscience/league-of-legends-diamond-ranked-games-10-min","version":1,"keywords":["subject, arts and entertainment","subject, science and technology, internet, online communities","subject, culture and humanities, games, video games","subject, culture and humanities, games"],"license":{"@type":"CreativeWork","name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"identifier":["600276"],"includedInDataCatalog":{"@type":"DataCatalog","name":"Kaggle","url":"https://www.kaggle.com"},"creator":{"@type":"Person","name":"Yi Lan Ma","url":"https://www.kaggle.com/bobbyscience","image":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3210935-kg.jpeg"},"distribution":[{"@type":"DataDownload","requiresSubscription":true,"encodingFormat":"zip","fileFormat":"zip","contentUrl":"https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min/download?datasetVersionNumber=1","contentSize":"552390 bytes"}],"commentCount":13,"dateModified":"2020-04-13T13:53:02.74Z","discussionUrl":"https://www.kaggle.com/bobbyscience/league-of-legends-diamond-ranked-games-10-min/discussion","alternateName":"Classify LoL ranked games outcome by looking at the first 10min worth of data","isAccessibleForFree":true,"thumbnailUrl":"https://storage.googleapis.com/kaggle-datasets-images/600276/1078419/2fb3bf6ad60c3f050712e620a3d8bd35/dataset-card.jpeg?t=2020-04-13-13-57-53","interactionStatistic":[{"@type":"InteractionCounter","interactionType":"http://schema.org/CommentAction","userInteractionCount":13},{"@type":"InteractionCounter","interactionType":"http://schema.org/DownloadAction","userInteractionCount":17049},{"@type":"InteractionCounter","interactionType":"http://schema.org/ViewAction","userInteractionCount":161436},{"@type":"InteractionCounter","interactionType":"http://schema.org/LikeAction","userInteractionCount":613}]}</script>
+
+
+  
+    
+
+  
+    
+
+
+    <script nonce="9tzHsaPSj63vZUxLq8BtEg==">window['useKaggleAnalytics'] = true;</script>
+
+  <script id="gapi-target" nonce="9tzHsaPSj63vZUxLq8BtEg==" src="https://apis.google.com/js/api.js" defer
+    async></script>
+  <script nonce="9tzHsaPSj63vZUxLq8BtEg==" src="/static/assets/runtime.js?v=8c0c05a6a86870f4dc08" data-turbolinks-track="reload"></script>
+  <script nonce="9tzHsaPSj63vZUxLq8BtEg==" src="/static/assets/vendor.js?v=76eaf413f5ccfd9bae36" data-turbolinks-track="reload"></script>
+  <script nonce="9tzHsaPSj63vZUxLq8BtEg==" src="/static/assets/app.js?v=1e5ba614becb67d36827" data-turbolinks-track="reload"></script>
+    <script nonce="9tzHsaPSj63vZUxLq8BtEg==" type="text/javascript">
+      window.kaggleStackdriverConfig = {
+        key: 'AIzaSyA4eNqUdRRskJsCZWVz-qL655Xa5JEMreE',
+        projectId: 'kaggle-161607',
+        service: 'web-fe',
+        version: 'ci',
+        userId: '0'
+      }
+    </script>
+</head>
+
+<body data-turbolinks="false">
+  <main>
+    
+
+
+
+
+
+<div id="site-container"></div>
+
+<div id="site-body" class="hide">
+    
+
+<div data-component-name="DatasetMaterialContainer" style="display: flex; flex-direction: column; flex: 1 0 auto;"></div><script class="kaggle-component" nonce="9tzHsaPSj63vZUxLq8BtEg==">var Kaggle=window.Kaggle||{};Kaggle.State=Kaggle.State||[];Kaggle.State.push({"basics":{"datasetId":600276,"slug":"league-of-legends-diamond-ranked-games-10-min","title":"League of Legends Diamond Ranked Games (10 min)","description":"### Context\n\nLeague of Legends is a MOBA (multiplayer online battle arena) where 2 teams (blue and red) face off. There are 3 lanes, a jungle, and 5 roles. The goal is to take down the enemy Nexus to win the game.\n\n\n### Content\n\nThis dataset contains the first 10min. stats of approx. 10k ranked games (SOLO QUEUE) from a high ELO (DIAMOND I to MASTER). Players have roughly the same level.\n\nEach game is unique. The **gameId** can help you to fetch more attributes from the Riot API.\n\nThere are 19 features per team (38 in total) collected after 10min in-game. This includes kills, deaths, gold, experience, level... It\u0027s up to you to do some feature engineering to get more insights.\n\nThe column **blueWins** is the target value (the value we are trying to predict). A value of 1 means the blue team has won. 0 otherwise.\n\nSo far I know, there is no missing value.\n\n### Glossary\n- Warding totem: An item that a player can put on the map to reveal the nearby area. Very useful for map/objectives control.\n- Minions: NPC that belong to both teams. They give gold when killed by players.\n- Jungle minions: NPC that belong to NO TEAM. They give gold and buffs when killed by players.\n- Elite monsters: Monsters with high hp/damage that give a massive bonus (gold/XP/stats) when killed by a team.\n- Dragons: Elite monster which gives team bonus when killed. The 4th dragon killed by a team gives a massive stats bonus. The 5th dragon (Elder Dragon) offers a huge advantage to the team.\n- Herald: Elite monster which gives stats bonus when killed by the player. It helps to push a lane and destroys structures.\n- Towers: Structures you have to destroy to reach the enemy Nexus. They give gold.\n- Level: Champion level. Start at 1. Max is 18.\n\n\n### Acknowledgements\n\nThanks, Rito Gaming.","viewCount":161436,"downloadCount":17049,"scriptCount":132,"topicCount":13,"owner":{"id":3210935,"imageUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3210935-kg.jpeg","name":"Yi Lan Ma","profileUrl":"/bobbyscience","slug":"bobbyscience","userTier":"CONTRIBUTOR"},"license":{"id":1,"name":"CC0: Public Domain","url":"https://creativecommons.org/publicdomain/zero/1.0/"},"overview":"Classify LoL ranked games outcome by looking at the first 10min worth of data","collaboratorList":{"owner":{"userId":3210935,"profileUrl":"/bobbyscience","thumbnailUrl":"https://storage.googleapis.com/kaggle-avatars/thumbnails/3210935-kg.jpeg","name":"Yi Lan Ma","slug":"bobbyscience","userTier":"CONTRIBUTOR","type":"OWNER"}},"coverImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/600276/1078419/2fb3bf6ad60c3f050712e620a3d8bd35/dataset-cover.jpeg?t=2020-04-13-13-57-53","data":{"totalSize":552390,"isFileset":true,"canDownload":true,"firestorePath":"IlLhIoYJuOEXz8HDi7AU/versions/Bjpj0VL8BszoMKLW2Lcd","downloadUrl":"/datasets/bobbyscience/bobbyscience/download?datasetVersionNumber=1","versionId":1108190,"id":619488},"voteCount":613,"medalUrl":"/static/images/medals/datasets/goldl@2x.png","downloadUrl":"/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min/download?datasetVersionNumber=1","lastUpdateTime":"2020-04-13T13:53:02.740Z","datasetVersionNumber":1,"creatorDisplayName":"Yi Lan Ma","cardImageUrl":"https://storage.googleapis.com/kaggle-datasets-images/600276/1078419/2fb3bf6ad60c3f050712e620a3d8bd35/dataset-card.jpeg?t=2020-04-13-13-57-53","categories":{"tags":[{"id":2200,"name":"arts and entertainment","fullPath":"subject \u003E arts and entertainment","listingUrl":"/datasets?group=public\u0026tagids=2200","description":"Activities that holds the attention and interest of an audience, or gives pleasure and delight. It can be an idea or a task, but is more likely to be one of the activities or events that have developed over thousands of years specifically for the purpose of keeping an audience\u0027s attention.","datasetCount":30486,"notebookCount":22806,"tagUrl":"/tags/arts-and-entertainment","displayName":"Arts and Entertainment"},{"id":16489,"name":"online communities","fullPath":"subject \u003E science and technology \u003E internet \u003E online communities","listingUrl":"/datasets?group=public\u0026tagids=16489","description":"","datasetCount":8044,"competitionCount":3,"notebookCount":1237,"tagUrl":"/tags/online-communities","displayName":"Online Communities"},{"id":2507,"name":"video games","fullPath":"subject \u003E culture and humanities \u003E games \u003E video games","listingUrl":"/datasets?group=public\u0026tagids=2507","description":"Video games were originally created to prevent people from going to college and getting good jobs. That back-fired and now we have data centers full of GPUs training models to tell the difference between cats and dogs. All thanks to gamers.","datasetCount":4805,"competitionCount":12,"notebookCount":3903,"tagUrl":"/tags/video-games","displayName":"Video Games"},{"id":2500,"name":"games","fullPath":"subject \u003E culture and humanities \u003E games","listingUrl":"/datasets?group=public\u0026tagids=2500","description":"One of the hallmarks of intelligence is the use of games and toys to occupy free time and develop intellectually. Often stored in Mom\u0027s basement.","datasetCount":4781,"competitionCount":1,"notebookCount":34697,"tagUrl":"/tags/games-and-toys","displayName":"Games"}]},"datasetExternalUrl":"https://www.kaggle.com/datasets/bobbyscience/league-of-legends-diamond-ranked-games-10-min","forumId":614251,"datasetVersionId":1078419,"canCreateTasks":true,"moderationStatus":"PRIVATED_MODERATION_STATUS_NO_ABUSE","lastVersionNumber":1,"diffType":"VERSIONED"},"accessedViaHashLink":false});performance && performance.mark && performance.mark("DatasetMaterialContainer.componentCouldBootstrap");</script><script nonce="9tzHsaPSj63vZUxLq8BtEg==" type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    "HTML-CSS": {
+    preferredFont: "TeX",
+    availableFonts: ["STIX", "TeX"],
+    linebreaks: {
+    automatic: true
+    },
+    EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+    inlineMath: [["\\(", "\\)"], ["\\\\(", "\\\\)"]],
+    displayMath: [["$$", "$$"], ["\\[", "\\]"]],
+    processEscapes: true,
+    ignoreClass: "tex2jax_ignore|dno"
+    },
+    TeX: {
+    noUndefined: {
+    attributes: {
+    mathcolor: "red",
+    mathbackground: "#FFEEEE",
+    mathsize: "90%"
+    }
+    }
+    },
+    Macros: {
+    href: "{}"
+    },
+    skipStartupTypeset: true,
+    messageStyle: "none",
+    extensions: ["Safe.js"],
+    });
+</script>
+<script type="text/javascript" nonce="9tzHsaPSj63vZUxLq8BtEg==">
+  window.addEventListener("DOMContentLoaded", () => {
+    const head = document.getElementsByTagName("head")[0];
+    const useProdHosts = ["www.kaggle.com", "admin.kaggle.com"];
+    const subdomain = useProdHosts.includes(window.location.hostname) ? "www" : "staging";
+
+    const lib = document.createElement("script");
+    lib.type = "text/javascript";
+    lib.src = `https://${subdomain}.kaggleusercontent.com/static/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML`;
+    head.appendChild(lib);
+  });
+</script>
+
+
+
+
+
+</div>
+
+
+
+
+  </main>
+</body>
+
+</html>
